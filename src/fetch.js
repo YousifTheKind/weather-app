@@ -16,6 +16,15 @@ async function fetchData(location) {
 }
 
 async function parseData(response) {
+    const daysOfWeek = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+    ];
     try {
         const allData = await response;
         console.log(allData);
@@ -25,7 +34,10 @@ async function parseData(response) {
             feelslike: allData.currentConditions.feelslike,
             condition: allData.currentConditions.conditions,
             date: new Date(allData.days[0].datetime),
-            // today: this.date.getDay(),
+            time: allData.currentConditions.datetime.slice(0, 5),
+            get today() {
+                return daysOfWeek[this.date.getDay()];
+            },
         };
         return parsedData;
     } catch (error) {
