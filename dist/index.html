@@ -3,7 +3,42 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Project Title</title>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="../assests/images/favicon-32x32.png"
+        />
+        <title>Weatherer</title>
     <script defer src="bundle.js"></script></head>
-    <body></body>
+    <body>
+        <div class="contianer">
+            <div class="main">
+                <form action="">
+                    <input type="text" placeholder="City" required />
+                    <button class="submitBtn">Search</button>
+                </form>
+                <div class="data-cointainer">
+                    <div class="left-section">
+                        <img
+                            src="../assests/icons/cloudy.svg"
+                            alt="weather icon"
+                            class="icon"
+                        />
+                        <p class="temp">22</p>
+                        <div class="tempUnit">
+                            <p>°C</p>
+                            <p>°F</p>
+                        </div>
+                    </div>
+                    <div class="right-section">
+                        <div class="datetime">
+                            <p class="day">Friday</p>
+                            <p class="time">17:00</p>
+                        </div>
+                        <p class="condition">Partly Cloudy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

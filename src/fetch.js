@@ -30,7 +30,8 @@ async function parseData(response) {
         console.log(allData);
         const parsedData = {
             address: allData.resolvedAddress,
-            temp: allData.currentConditions.temp,
+            tempF: allData.currentConditions.temp,
+            tempC: (((allData.currentConditions.temp - 32) * 5) / 9).toFixed(1),
             feelslike: allData.currentConditions.feelslike,
             condition: allData.currentConditions.conditions,
             date: new Date(allData.days[0].datetime),

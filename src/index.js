@@ -8,7 +8,6 @@ async function submitHandler(e) {
     const location = document.querySelector("input").value;
     const locationData = await fetchData(location);
     console.log(locationData);
-    console.log(locationData.today);
     document.querySelector("form").reset();
 }
 
