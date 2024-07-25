@@ -1,7 +1,6 @@
 async function fetchData(location) {
     const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=LX4FWV9HHAK3QND7WQYDZVBX9&contentType=json`;
 
-    console.log("fetching...");
     try {
         const response = await fetch(url, { mode: "cors" });
         const responseData = await response.json();
@@ -11,7 +10,7 @@ async function fetchData(location) {
             throw new Error("Error: " + response);
         }
     } catch (error) {
-        console.log(error);
+        alert(error);
     }
 }
 
@@ -27,9 +26,8 @@ async function parseData(response) {
     ];
     try {
         const allData = await response;
-        console.log(allData);
         const parsedData = {
-            address: allData.resolvedAddress,
+            address: allData.address,
             tempF: allData.currentConditions.temp,
             tempC: (((allData.currentConditions.temp - 32) * 5) / 9).toFixed(1),
             feelslike: allData.currentConditions.feelslike,
@@ -39,10 +37,11 @@ async function parseData(response) {
             get today() {
                 return daysOfWeek[this.date.getDay()];
             },
+            icon: allData.currentConditions.icon,
         };
         return parsedData;
     } catch (error) {
-        console.log(error);
+        alert(error);
     }
 }
 export { fetchData, parseData };

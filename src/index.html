@@ -17,17 +17,28 @@
                     <input type="text" placeholder="City" required />
                     <button class="submitBtn">Search</button>
                 </form>
-                <div class="data-cointainer">
+                <div class="location"></div>
+                <div class="data-container">
                     <div class="left-section">
                         <img
                             src="../assests/icons/cloudy.svg"
                             alt="weather icon"
                             class="icon"
                         />
-                        <p class="temp">22</p>
+                        <p class="temp">0</p>
                         <div class="tempUnit">
-                            <p>°C</p>
-                            <p>°F</p>
+                            <button class="temp-c" id="selectedTempUnit">
+                                <img
+                                    src="../assests/icons/celsius.svg"
+                                    alt=""
+                                />
+                            </button>
+                            <button class="temp-f">
+                                <img
+                                    src="../assests/icons/fahrenheit.svg"
+                                    alt=""
+                                />
+                            </button>
                         </div>
                     </div>
                     <div class="right-section">
