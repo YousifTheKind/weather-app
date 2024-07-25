@@ -1,5 +1,7 @@
 import "./styles.css";
 import { fetchData } from "./fetch";
+import "../assests";
+
 const submitBtn = document.querySelector(".submitBtn");
 const locationDiv = document.querySelector(".location");
 const icon = document.querySelector(".icon");
