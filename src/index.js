@@ -1,6 +1,5 @@
 import "./styles.css";
 import { fetchData } from "./fetch";
-import "../assests";
 
 const submitBtn = document.querySelector(".submitBtn");
 const locationDiv = document.querySelector(".location");
@@ -48,7 +47,9 @@ function displayData(locationData) {
         locationData.address.charAt(0).toUpperCase() +
         locationData.address.slice(1);
 
-    icon.src = `../assests/icons/${locationData.icon}.svg`;
+    const dynamicIcon = require(`./assets/icons/${locationData.icon}.svg`);
+    icon.src = dynamicIcon;
+
     tempC = locationData.tempC;
     tempF = locationData.tempF;
     if (selectedTempUnit == "C") {

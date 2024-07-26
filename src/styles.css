@@ -1,6 +1,6 @@
 @font-face {
     font-family: "coolFont";
-    src: url("../assests/fonts/Cabin-Regular.ttf");
+    src: url("./assets/fonts/Cabin-Regular.ttf");
     font-style: normal;
 }
 * {
