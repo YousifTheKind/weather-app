@@ -1,4 +1,4 @@
-# Template-Repo
+# Weather App
 
 Weather app to practice promises and API calls
 
